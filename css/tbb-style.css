@@ -1,0 +1,165 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+}
+
+.img{
+  max-width:100%;
+  max-height:100%
+  }
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+  /*border-style: solid;  ---in caso di bordo, abilita
+  border-width: 1px;
+  border-color: darkred;*/
+}
+
+.sidenav a:hover {
+  font-weight:bold;
+  font-size: 28px; 
+  transform: scale(1.10);
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkred;
+
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 16px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  color: white;
+  page-break-after: always;
+}
+      
+a:link { /* unvisited link */
+        color: rgb(64, 179, 224);
+      }
+      
+a:visited { /* visited link */
+        color: #4476ff;
+      }
+textarea{
+	width: 100%;    
+}
+
+.butround{    
+	display: block;
+	width: 100%;    
+	border-radius: 1rem; 
+	border: none;
+	background-color: darkred;
+	color: whitesmoke;
+	font-size: 16px;
+	padding: 16px 30px;
+  	text-align: center;
+}
+.butround:hover {
+  color: #f1f1f1;
+  font-weight:bold;
+  font-size: 26px; 
+  /*transform: scale(1.10);*/
+
+}
+.collapsible {
+background-color: #111;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25B4\25BE" 
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Cards */
+cards {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.btc,
+.ada,
+.litecoin,
+.tether,
+.usdt,
+.bat,
+.ethereum {
+    display: inline-grid;
+    max-width: 450px;
+    min-width: 350px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px, 60px) 1fr;
+    grid-template: 
+        "info"
+        "chart";
+    border-radius: 30px;
+}
+
+.asset-info {
+    grid-area: info;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0 5%;
+}
+
+.title {
+    display: inline-flex;
+}
+
+/* Charts */
+#btcChart,
+#adaChart,
+#litecoinChart,
+#usdtChart,
+#batChart,
+#ethereumChart{
+  grid-area: chart;
+  border-radius: 0px 0px 30px 30px;
+  margin-top: auto;
+}
+
