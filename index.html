@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bit Bet - the brutalist website</title>
+<link href="css/tbb-style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="sidenav">
+  <a  href="#Home">Home</a>
+  <a  href="#FUQ">FUQ</a>
+  <a  href="#Random">Random</a>
+  <a  href="#TOOL">Tools</a>
+  <a  href="#FRACT">Frattali</a>
+  <a  href="cripto.html">Cripto</a>
+  <a  href="timeline2.html">Timeline</a>
+  <a  href="#whitep">Whitepapers</a> 
+  <a  href="#SECUR">Security</a>
+  <a  href="#Contatti">Contatti</a>
+  <a  href="indexeng.html">English version</a>
+</div>
+
+<div class="main">
+	<p style="font: size 10px;text-align:center"> Questo "sito" è un work in progress. Non sto usando cookie, ma internet è un posto complicato. Se continui la navigazione accetti che potrebbero essercene, come da privacy policy di <a rel="nofollow" href="https://docs.github.com/en/github/site-policy/github-privacy-statement" target="_blank">Github</a>.
+		<br>
+		<br> 
+		<br> 
+	<h1 style="text-align:center"> The Bit Bet</h1>
+	<br> 
+	<center>
+		<div>
+		<img class="img" src="/img/logodark.jpg" alt="logodark">
+		</div>
+	</center>
+		<br>
+	
+	<h2 id="Home">Benvenuto</h2>
+	
+  	<p>The Bit Bet è una newsletter, pubblicata ogni settimana tramite substack, che ti spedisce 5 link meritevoli di attenzione. Hai presente quell'amico che ti manda dei link che sono proprio una figata? Ecco, qualcosa del genere, online.</p>
+  	<p>I temi? Soprattutto tecnologia - in fondo c'è Bit già nel nome - ma non poniamoci limiti, che internet è vasto e pieno di cose interessanti.</p>
+  	<p>Se vuoi, puoi iscriverti <a rel="nofollow" href="https://thebitbet.substack.com/p/coming-soon" target="_blank">qui</a> o leggere alcuni post <a rel="nofollow" href="https://thebitbet.substack.com/" target="_blank">qua</a>.</p>
+<br><br><br><br>
+<p>Da qualche tempo alcune delle tracce musicali che consiglio sono entrate in una playlist di Spotify. <br> Trovi il link qui sotto, ci sono grandi classici e pezzi ingegnosi, anche se il meglio resta nella newsletter. </p>
+<br>
+	  <iframe src="https://open.spotify.com/embed/playlist/7l9RN5ryxK6j8h2kOLIdPK" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+	
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="main">
+	<h2 id="FUQ">FUQ</h2>
+  	<p>Benvenuto nella sezione FAQ, le "Frequently Asked Questions", che in questo sito ho rinominato "Frequently User Questions", perchè fa simpatia. 
+		  <br> 
+		Iniziamo subito:</p>
+
+	<button type="button" class="collapsible">Cos'è The Bit Bet?</button>
+	<div class="content">
+	  <p>Fammi capire... non hai nemmeno letto la home page? E va bene, in fondo ho messo io la sezione FUQ e questa è proprio una domanda FUQ. The Bit Bet è una newsletter, pubblicata ogni settimana tramite substack, che ti spedisce 5 link meritevoli di attenzione. Questo è il sito che segue e sviluppa alcuni dei temi trattati, oltre alle passioni dell'autore.
+		Se vuoi, puoi iscriverti <a href="https://thebitbet.substack.com/p/coming-soon" target="_blank">qui</a> o leggere alcuni post <a href="https://thebitbet.substack.com/" target="_blank">qua</a>.</p>
+		<br> 
+	</div>
+	<button type="button" class="collapsible">Dov'è finito il sito colorato che ricordavo? Non ti piacciono i colori?</button>
+	<div class="content">
+	  <p>Certo che mi piacciono, ma quel sito era leggermente pacchiano, e nemmeno molto coerente nelle sue parti, quindi ho dovuto <em>rimaneggiarlo</em>. Mentre ragionavo su come fare, ho trovato varie tesi a supporto di un internet più snello, leggibile ed efficiente. Alla fine, le ho fatte mie e questo è il risultato.
+		Se questi concetti ti interessano, una buona introduzione al tema la trovi a questo <a href="https://www.brutalist-web.design/" target="_blank">link</a>.
+	<br>
+	</div>
+	<button type="button" class="collapsible">La tua risposta non mi ha soddisfatto, voglio i colori!!!1!</button>
+	<div class="content">
+	<p>Va bene, eccoteli tutti.</p>	
+	<br>
+	<br>
+	<canvas id="colors" width="400" height="400"></canvas>
+	<script>
+var canvas = document.getElementById("colors");
+var graphics = canvas.getContext("2d");
+
+var CX = canvas.width / 2,
+    CY = canvas.height/ 2,
+    sx = CX,
+    sy = CY;
+
+for(var i = 0; i < 360; i+=0.1){
+    var rad = i * (2*Math.PI) / 360;
+    graphics.strokeStyle = "hsla("+i+", 100%, 50%, 1.0)";   
+    graphics.beginPath();
+    graphics.moveTo(CX, CY);
+    graphics.lineTo(CX + sx * Math.cos(rad), CY + sy * Math.sin(rad));
+    graphics.stroke();
+}
+	</script>
+	  </p>
+	  <br> 
+	  <br>
+	</div>
+	<button type="button" class="collapsible">Questo sito è brutto, perchè non usi rand(Jekyll, Wordpress,Joomla!, Ghost, [il CMS del giorno])?</button>
+	<div class="content">
+	  <p>Il web è la figata definitiva, ogni giorno nascono (...e muoiono) progetti di ogni genere. Ad esempio, la sezione <a href='#TOOL'>Tool</a> è piena di esperimenti del genere. I CMS non fanno eccezione, ce ne sono tanti, tantissimi, che fanno cose meravigliose e impensabili fino al giorno prima. 
+	  <br>Eppure...
+	  <ul>
+		<li> Ne ho bisogno? No</li>
+		<li> Posso fare le stesse cose con strumenti più semplici e meno dispendiosi in termini di risorse? Si</li>
+		<li>Padroneggiare un CMS è una skill utile? Certo, almeno finchè il CMS esiste, ma preferisco focalizzarmi sulle fondamenta, prima di costruire il tetto.</li>
+	  </ul>
+	  Inoltre, spippolare con javascript mi ricorda che ci sono persone meno fortunate di me al mondo, e aumenta la gratitudine.
+	</p>
+	<br> 
+	</div>
+	<button type="button" class="collapsible">Cosa sono tutte queste sezioni?</button>
+	<div class="content">
+	  <p>Contengono piccoli progetti e cosine interessanti, una specie di block notes online che raccoglie informazioni ed espedienti. 
+		<br>Magari troverai qualcosa di utile anche tu.</p>
+		<br> 
+	</div>
+	<button type="button" class="collapsible">Dov'è la lingua inglese? </button>
+	<div class="content">
+	  <p>Per quanto riguarda il sito, c'è un tab che ti porta direttamente alla versione tradotta. Se invece parlavi della newsletter, è una questione dibattuta. Da un lato sono contento della piccola nicchia "in italiano" che cresce con la newsletter, dall'altro mi sto perdendo un sacco di persone a cui interessa la tecnologia ma non lo parlano. Purtroppo fare due newsletter è fuori questione, quindi il tema è ancora aperto.</p>
+	  <br> 
+	</div>
+	<button type="button" class="collapsible">Questo sito non è completo! Orrore!</button>
+	<div class="content">
+	  <p>Non è completo e non lo sarà mai. Tieni sotto controllo l'OCD o cambia sito, qui dentro è tutto un prototipo.</p>
+	  <br> 
+	</div>
+	<button type="button" class="collapsible">Qual'è la tua filosofia di vita? </button>
+	<div class="content">
+		<ol>
+			<li>Non fare agli altri quello che non vorresti fosse fatto a te.</li>
+			<li>Non decidere per gli altri.</li>
+			<li>Nel dubbio, fatti una risata.</li>
+		  </ol>
+		  <br> 
+		</div>
+	<button type="button" class="collapsible">Dove vedi la tecnologia tra dieci anni? </button>
+	<div class="content">
+	  <p>Questa è una FUQ che più FUQ non si può, ma mi tocca rispondere pur sapendo che è impossibile azzeccarla. 
+		  <br>E, purtroppo, non è detto che ci arriviamo ai prossimi dieci anni, visto l'andazzo del clima. 
+		  <br>
+		  Dai, butto lì le tre previsioni più forti che mi vengono in mente:
+		<ol>
+			<li>Un sistema automatizzato gestirà la maggior parte delle attività "noiose" (pulire, lavare, stirare, cucinare, guidare)</li>
+			<li>L'IA, assieme a un sofisticato sistema di specchi e leve, farà il mio lavoro. Se poi sarò io ad essere pagato, quello è un altro discorso...</li>
+			<li>Human-machine convergence</li>
+		</ol>
+		</p>
+		<br> 	
+	</div>
+			<button type="button" class="collapsible">Dov'è finito Satoshi Nakamoto?</button>
+			<div class="content">
+			  <p>E' in Amazzonia? Forse in Patagonia? O in Perù? A Timbuctù? Non lo sai neanche tu...</p>
+			  <br> 
+			</div>
+
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="main">
+	<h2 id="Random">Random</h2>
+  	<p>Ti ricordi Stumbleupon? Ti portava casualmente in un magico anfratto di internet: a volte geniale, a volte inutile, a volte un completo spreco di tempo. Mi manca quell'internet più semplice e confusionario, acerbo e pioneristico, quindi ho deciso di riprodurlo. Usando il pulsante qui sotto, verrai portato "magicamente" a uno dei link che sono stati consigliati nella newsletter.
+	  </p>
+	  <script type = "text/javascript">
+		var links = ['https://open.spotify.com/album/6qZUya0mkucuxvoIp4akVT', 'https://twitter.com/NeuralYorker', 'https://www.reddit.com/r/powerwashingporn/comments/l1ev4x/i_live_for_wednesday/', 'https://www.therobinlord.com/making-a-digital-clock-in-google-sheets/', 'https://youtu.be/rvFk8hapDZY', 'https://interactionmagic.com/UX-LEGO-Interfaces', 'https://rameznaam.com/2020/05/14/solars-future-is-insanely-cheap-2020/', 'https://www.ilpost.it/2021/02/18/whisky-invecchiamento-tecnologia/', 'https://ethics-of-ai.mooc.fi/', 'https://www.raptitude.com/2020/04/how-to-take-a-break-from-your-mind/', 'https://gist.github.com/d12frosted/7471e2123f10485d96bb', 'https://vole.wtf/kilobytes-gambit/', 'https://avinayak.github.io/algorithms/programming/2021/02/19/finding-mona-lisa-in-the-game-of-life.html', 'https://www.reddit.com/r/nextfuckinglevel/comments/lyqeju/this_guys_insane_trickshots/', 'https://www.youtube.com/watch?v=16y1AkoZkmQ', 'https://www.youtube.com/watch?v=mLRjFWDGs1g', 'https://www.youtube.com/watch?v=qv6UVOQ0F44', 'https://cert-agid.gov.it/news/il-ransomware-razzista/', 'https://www.hackmageddon.com/2021/02/17/the-biggest-data-breaches-of-2021/', 'https://www.bbc.com/news/technology-56012952', 'https://imgur.com/iFQ5g1u', 'https://www.youtube.com/watch?v=MpLFYa-8f_Q', 'https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology', 'https://fold.it/', 'https://arxiv.org/abs/2012.07532', 'https://www.youtube.com/watch?v=WXuK6gekU1Y', 'https://www.reddit.com/r/AbsoluteUnits/comments/l4bv6f/the_bison_that_live_by_my_house_realllllly_like/', 'https://www.reddit.com/r/HuskyTantrums/comments/l0x56u/i_wuv_you/', 'https://www.reddit.com/r/powerwashingporn/comments/l1ev4x/i_live_for_wednesday/', 'https://www.newyorker.com/tech/annals-of-technology/who-should-stop-unethical-ai', 'https://en.wikipedia.org/wiki/StumbleUpon', 'https://www.rollingstone.com/culture/culture-features/serial-killers-1970s-2000s-murders-1121705/', 'https://www.milanoattraverso.it/mappe/', 'https://en.wikipedia.org/wiki/Rosy_retrospection', 'https://xkcd.com/1688/', 'http://listen.hatnote.com/', 'https://www.youtube.com/watch?v=l0xh4qopQpk', 'https://www.agendadigitale.eu/mercati-digitali/crisi-del-chip-cosa-sta-succedendo-gli-impatti-della-pandemia-e-le-strategie-per-il-rilancio/', 'http://makeanddo4d.com/spreadsheet/', 'https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A', 'https://i.imgur.com/tWq3D7l.gifv', 'https://i.redd.it/8cpr0uqn69l61.jpg', 'https://storie.valigiablu.it/robot-e-lavoro/', 'https://e360.yale.edu/features/water-warning-the-looming-threat-of-the-worlds-aging-dams', 'https://www.animatedknots.com/', 'https://mkorostoff.github.io/1-pixel-wealth/', 'https://pioneerworks.org/broadcast/xenobots-claire-evans/', 'https://cookieconsentspeed.run/', 'https://www.youtube.com/watch?v=RXZy8BbMz_U', 'https://www.youtube.com/watch?v=UNAr5tzZxdk', 'https://www.scientificamerican.com/article/the-most-accurate-flat-map-of-earth-yet/', 'https://www.youtube.com/watch?v=dKSB2O2Shts','https://github.com/eyal0/Chicken-story/blob/main/README.md', 'https://minitokyo3d.com/', 'https://css-tricks.com/the-best-font-loading-strategies-and-how-to-execute-them/', 'https://jimbly.github.io/regex-crossword/', 'https://moores.samaltman.com/', 'https://www.popularmechanics.com/adventure/outdoors/a35340487/how-to-fall-from-a-plane-and-survive/', 'https://edition.cnn.com/style/article/hong-kong-tunnels-climate-crisis-intl-hnk-dst/index.html', 'https://training.kalzumeus.com/newsletters/archive/do-not-end-the-week-with-nothing', 'https://clickclickclick.click/', 'https://webtransparency.cs.princeton.edu/dark-patterns/', 'https://deathoftheinfluencer.com/', 'https://www.improbable.com/2020/05/05/recent-progress-in-automatic-sarcasm-detection/', 'https://www.youtube.com/embed/p5HH2UfZ2wE', 'https://www.thedrive.com/the-war-zone/39899/darpa-now-has-ai-controlled-f-16s-working-as-a-team-in-virtual-dogfights', 'https://futurism.com/boston-dynamics-robot-battery-combat-drill', 'https://www.google.com/maps/space/iss/@29.5602853,-95.0853914,2a,75y,260h,90t/data=!3m6!1e1!3m4!1szChzPIAn4RIAAAQvxgbyEg!2e0!7i10000!8i5000', 'https://www.youtube.com/watch?v=Wi7AvXL2n_Q', 'https://www.outsideonline.com/2414872/how-to-read-surface-weather-maps', 'https://www.youtube.com/watch?v=QX2XCBH-6zQ',
+		'https://edition.cnn.com/interactive/2021/03/cnnix-steership/', 'https://www.schneier.com/blog/archives/2021/03/illegal-content-and-the-blockchain.html', 'https://www.youtube.com/watch?v=-N-R2S7TrFk', 'https://increment.com/frontend/ask-an-expert-why-is-css-the-way-it-is/', 'https://edition.cnn.com/travel/article/norway-ship-tunnel/index.html',	'https://www.youtube.com/watch?v=QybSFsIbKPE', 'https://fake.sale/', 'https://youtu.be/fTm_-jtRW4g', 'https://www.museumofeverythingelse.com/', 	'https://www.maritime-executive.com/editorials/ever-given-what-happens-now', 'https://www.theguardian.com/news/2021/mar/02/wentworth-golf-club-reignwood-yan-bin', 'https://www.youtube.com/watch?v=baSUO3zjneA', 'https://collections.louvre.fr/', 'https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3', 'https://dinosaurpictures.org/ancient-earth#750', 	'https://www.youtube.com/watch?v=i5SLi-GZ0Z4', 	'http://solarprotocol.net/index.html', 	'https://thebulletin.org/doomsday-clock/datavisualizations', 'https://www.cnbc.com/2021/03/02/china-bitcoin-mining-hub-to-shut-down-cryptocurrency-projects.html', 'https://melmagazine.com/en-us/story/when-did-people-start-working-out', 'https://www.instagram.com/eth_landscapes/', 'https://www.mic.com/p/what-wine-aged-in-space-tastes-like-apparently-67921652', 	'https://permission.site/', 'open.spotify.com/user/w2p1oq867ns7jele6g3lw66fk', 'https://github.com/rbtnn/vim-mario', 'https://en.wikipedia.org/wiki/Illegal_prime', 'https://primes.utm.edu/'
+	]
+		var rand = links[Math.floor(Math.random() * links.length)];
+				function Redirect() {
+				   window.location = rand;
+				}
+		  </script>
+		  <p>
+			  <br>Ecco il bottone. Usalo a tuo rischio e pericolo. 
+			  <br><br><br>
+			</p>
+		  <form>
+			<input type = "button" class="butround" value = "Random Power" onclick = "Redirect();" />
+		  </form>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="main">
+	<h2 id="TOOL">Tools</h2>
+  	<p>Una raccolta di tool/ cose utili/ strumenti/ cose belle. Nella migliore tradizione di The Bit Bet, più sono genialate pazzesche più ci piacciono! </p>
+
+	  <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+	  <table class="sortable" style="width:100%; color:white">
+<thead>
+<tr>
+  <th>Tipo</th>
+	<th>Nome</th>
+  <th class="sorttable_nosort" >Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Web</td>
+  <td><a href="https://www.tablesgenerator.com">Tables Generator</a></td>
+  <td>Un generatore automatico di tabelle </td>
+</tr>
+<tr>
+  <td>Firewall</td>
+  <td><a href="https://synwall.io/">Synwall</a></td>
+  <td>A zero-configuration (IoT) firewall</td>
+</tr>
+<tr>
+  <td>Text Expander</td>
+  <td><a href="https://espanso.org/">Espanso</a></td>
+  <td>A Privacy-first, Cross-platform Text Expander (tutto italiano... ) </td>
+</tr>
+<tr>
+  <td>Software</td>
+	<td><a href="https://flameshot.org/">Flameshot</a></td>
+  <td>Powerful yet simple to use screenshot software</td>
+</tr>
+<tr>
+  <td>Web</td>
+   <td><a href="https://www.tryphotino.io/">Photino</a></td>
+  <td>Open-source project, to use Web UI in native applications across platforms </td>
+</tr>
+<tr>
+  <td>Matemagica</td>
+  <td><a href="https://felixboiii.github.io/paper-plotter/#premade-functions">Paper Plotter</a></td>
+  <td>Funzioni 3D su carta</td>
+</tr>
+<tr>
+  <td>Browser</td>
+  <td><a href="https://nyxt.atlas.engineer/">Nyxt</a></td>
+  <td>A keyboard-oriented, infinitely extensible web browser designed for power users.</td>
+</tr>
+<tr>
+  <td>Web</td>
+  <td><a href="https://explainshell.com/">Explain shell</a></td>
+  <td>write down a command-line to see the help text that matches each argument</td>
+</tr>
+<tr>
+  <td>Photo</td>
+  <td><a href="https://www.photopea.com/">Photopea</a></td>
+  <td>Free ad complete online photo editor</td>
+</tr>
+<tr>
+  <td>Software</td>
+  <td><a href="https://jerryscript.net">Jerryscript</a></td>
+  <td>Lightweight JavaScript engine for resource-constrained devices such as microcontrollers</td>
+</tr>
+<tr>
+  <td>Tools</td>
+  <td><a href="https://www.omnicalculator.com/">Omnicalculator</a></td>
+  <td>Una raccolta di calcolatrici tematiche</td>
+</tr>
+<tr>
+  <td>Code</td>
+  <td><a href="https://input.djr.com/preview/">Input</a></td>
+  <td>A flexible system of fonts designed specifically for code</td>
+</tr>
+<tr>
+  <td>Docs</td>
+  <td><a href="https://github.com/docuowl/docuowl">Docuowl</a></td>
+  <td>A pretty documentation generator</td>
+</tr>
+<tr>
+  <td>Cloud</td>
+  <td><a href="https://coollabs.io/coolify">Coolify</a></td>
+  <td>An open-source, hassle-free, self-hostable Heroku & Netlify alternative</td>
+</tr>
+ <tr>
+  <td>Docs</td>
+  <td><a href="https://pandoc.org/">Pandoc</a></td>
+  <td>Convert files from one markup format into another</td>
+</tr>
+<tr>
+  <td>Tools</td>
+  <td><a href="https://github.com/akavel/up">Up - The ultimate plumber</a></td>
+  <td>A tool for writing Linux pipes in a terminal-based UI interactively</td>
+</tr>
+<tr>
+  <td>Tools</td>
+  <td><a href="https://cryptii.com/">Cryptii</a></td>
+  <td>Open source web app offering modular conversion, encoding and encryption online</td>
+</tr>
+  <tr>
+  <td>Search Engine</td>
+  <td><a href="https://lite.duckduckgo.com/lite">DuckDuckGo Lite</a></td>
+  <td>A resource-friendly version of the privacy-focused search engine</td>
+</tr>
+  <tr>
+  <td>Security</td>
+  <td><a href="https://www.passwordstore.org/">Pass</a></td>
+  <td>The standard unix password manager</td>
+</tr>
+  <tr>
+  <td>Finance</td>
+  <td><a href="https://backtest.curvo.eu/">Backtest</a></td>
+  <td>Back-test your portfolio (Europe)</td>
+</tr>
+  <tr>
+  <td>Security</td>
+  <td><a href="https://github.com/LINCnil/GDPR-Developer-Guide">CNIL - GDPR developer guide</a></td>
+  <td>CNIL best practices under open source license.</td>
+</tr>
+  <tr>
+  <td>Code</td>
+  <td><a href="https://github.com/alfiopuglisi/guietta">Guietta</a></td>
+  <td>A tool for making simple Python GUIs</td>
+</tr>
+  <tr>
+  <td>Photo</td>
+  <td><a href="https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life">Bringing Old Photos Back to Life</a></td>
+  <td>Old Photo Restoration via Deep Latent Space Translation</td>
+</tr>
+  <tr>
+  <td>Makers</td>
+  <td><a href="https://www.thingiverse.com/thing:248009">Plotclock</a></td>
+  <td>A clock that plots time.</td>
+</tr>
+  <tr>
+  <td>Security</td>
+  <td><a href="https://www.gpg4win.org/">Gpg4win</a></td>
+  <td>GNU Privacy Guard for Windows</td>
+</tr>
+  <tr>
+  <td>Puzzle</td>
+  <td><a href="https://www.thingiverse.com/thing:3936723">12 piece puzzle</a></td>
+  <td>Single-piece puzzle</td>
+</tr>
+  <tr>
+  <td>Docs</td>
+  <td><a href="https://www.slatejs.org/">Slate</a></td>
+  <td>A completely customizable framework for building rich text editors</td>
+</tr>
+  <tr>
+  <td>Maps</td>
+  <td><a href="https://www.mapcustomizer.com/">Map Customizer</a></td>
+  <td>Create map with specific addresses</td>
+</tr>
+  <tr>
+  <td>Tools</td>
+  <td><a href="https://app.diagrams.net/">Draw.io</a></td>
+  <td>Great online diagramming web site</td>
+</tr>
+  <tr>
+  <td>Docs</td>
+  <td><a href="https://techspot.tradepub.com/">Information Technology Research Library</a></td>
+  <td>white papers, reports, case studies, magazines</td>
+</tr>
+<tr>
+	<td>Web</td>
+	<td><a href="https://www.chartjs.org/">Chart.js</a></td>
+	<td>Simple yet flexible JavaScript charting for designers & developers</td>
+  </tr>
+ <tr>
+	<td>Web</td>
+	<td><a href="https://kryogenix.org/code/browser/sorttable/">Sorttable</a></td>
+	<td>Make all your tables sortable</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  <div class="main">
+		<h2 id="FRACT">Frattali</h2>
+		  <p>Volevo creare un buon simulatore di frattali, ma è più complicato del previsto, quindi per ora divertitevi con queste variazioni sul <a href="https://en.wikipedia.org/wiki/L-system">sistema di Lyndenmayer</a>, ok? Ringrazio <a href="https://lautarolobo.xyz/">Lautaro</a> e... nel caso in cui vi dia problemi col browser fatemelo sapere. 
+			<br> La ricorsività può avere effetti imprevisti. </p> 
+			<p style="font-size:14px">La ricorsività può avere effetti imprevisti.</p> 
+			<p style="font-size:12px">La ricorsività può avere effetti imprevisti.</p> 
+			<p style="font-size:10px">La ricorsività può avere effetti imprevisti.</p>
+			<p style="font-size: 8px">La ricorsività può avere effetti imprevisti.</p> 
+			<p style="font-size: 6px">La ricorsività può avere effetti imprevisti.</p> 
+			<p style="font-size: 4px">La ricorsività può avere effetti imprevisti.</p>
+			<p style="font-size: 2px">La ricorsività può avere effetti imprevisti.</p> 
+			<p style="font-size: 1px">La ricorsività può avere effetti imprevisti.</p>
+		  <div class="blackdiv">
+			<canvas id="my_canvas" width="800" height="600" ></canvas>
+		   <script>
+		   var randomnumber = Math.floor(Math.random() * 200);	
+		   var myCanvas = document.getElementById("my_canvas");
+		   var ctx = myCanvas.getContext("2d"); 
+					 
+		   function draw(startX, startY, len, angle, branchWidth) {
+			   ctx.lineWidth = branchWidth;
+			   ctx.beginPath();
+			   ctx.save();
+	   
+			   ctx.strokeStyle = "#"+((1<<24)*Math.random()|0).toString(16);
+			   ctx.fillStyle = "#"+((1<<24)*Math.random()|0).toString(16);
+	   
+			   ctx.translate(startX, startY);
+			   ctx.rotate(angle * randomnumber);
+			   ctx.moveTo(0, 0);
+			   ctx.lineTo(0, randomnumber);
+			   ctx.stroke();
+	   
+			   if(len < 20) {
+				   ctx.restore();
+				   return;
+			   }
+	   
+			   draw(0, -len, len*0.8, randomnumber, branchWidth*0.8);
+			   draw(0, -len, len*0.8, randomnumber+15, branchWidth*0.8);
+	   
+			   ctx.restore();
+		   }
+		   draw(randomnumber, randomnumber, 200, 15, 5) 
+		   
+		 </script>
+		 </div>
+		 <form>
+			   <input type = "button" class='butround' value = "Rigenera" onclick = "location.reload();" />
+		</form>
+	  </div>
+	
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	  <div class="main">
+		<h2>Cripto</h2>
+		  <p> Per il tracker di criptovalute, ti basta cliccare <a href="cripto.html">qui</a> o nella voce di menù a sinistra. 
+			<br> May your cripto grow prosper.</p> 
+		</div>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<div class="main">
+			<h2>Timeline</h2>
+			  <p> Per la timeline interattiva ti basta cliccare <a href="timeline2.html">qui</a> o nella voce di menù a sinistra. 
+				<br>Buona lettura</p> 
+			</div>
+	
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	  <div class="main">
+		<h2 id="whitep">Cripto whitepapers</h2>
+		  <p>Negli anni, il <em>whitepaper</em> è diventato lo strumento principale per diffondere i manifesti programmatici delle proprie cripto.
+			<br> Non è obbligatorio nè indice di bontà della proposta, ma rilasciarne uno è praticamente la norma. 
+			 <br> In questa sezione, puoi trovarne una buona raccolta, che, in una prossima versione, diventerà un repository ad hoc. 
+			 <br>Ricordati anche di pensare con la tua testa mentre leggi questi documenti, non tutti hanno lo stesso grado di serietà. 
+			 <br>Per proporre aggiunte o integrazioni, la sezione contatti è sempre pronta, in fondo.
+			</p>
+		  <table class="sortable" style="width:60%; color:white">
+	<thead>
+	<tr>
+	  <th>Anno</th>
+		<th>Nome Progetto</th>
+	  <th class="sorttable_nosort" >Note</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	  <td>2009</td>
+	  <td><a href="https://bitcoin.org/bitcoin.pdf">Bitcoin</a></td>
+	  <td>L'originale </td>
+	</tr>
+	<tr>
+	  <td>2013</td>
+	  <td><a href="https://ethereum.org/en/whitepaper/">Ethereum</a></td>
+	  <td>Non in pdf</td>
+	</tr>
+	<tr>
+	  <td>2014</td>
+	  <td><a href="https://www.exodus.com/assets/docs/dash-whitepaper.pdf">Dash</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2017</td>
+		<td><a href="https://drive.google.com/file/d/1M4aA-Dt6zpKu1csDEx4cMCxLU6dRmrUz/view">Ton technical whitepaper</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2019</td>
+	   <td><a href="https://www.diem.com/en-us/white-paper/#cover-letter">Libra / Diem</a></td>
+	  <td>Non in pdf </td>
+	</tr>
+	<tr>
+	  <td>2020</td>
+	  <td><a href="https://blockstream.com/assets/downloads/pdf/liquid-whitepaper.pdf">Liquid</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2017</td>
+	  <td><a href="https://filecoin.io/filecoin.pdf">Filecoin</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2018</td>
+	  <td><a href="https://www.litecoinca.sh/downloads/lcc_whitepaper.pdf">Litecoin Cash</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2018</td>
+	  <td><a href="https://www.bitcoinote.org/whitepaper.pdf">Bitcoinote</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2019</td>
+	  <td><a href="https://www.bitbns.com/bns/whitepaper.pdf">Bns token</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2016</td>
+	  <td><a href="https://electroneum.com/overview-white-paper.pdf">Electroneum</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2016</td>
+	  <td><a href="https://tether.to/wp-content/uploads/2016/06/TetherWhitePaper.pdf">Tether</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2018</td>
+	  <td><a href="https://cdy.one/whitepaper.pdf">Bitcoin Candy</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2018</td>
+	  <td><a href="https://stellargold.net/whitepaper.pdf">StellarGold</a></td>
+	  <td></td>
+	</tr>
+	 <tr>
+	  <td>2018</td>
+	  <td><a href="https://account.paxos.com/whitepaper.pdf">Paxos</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2021</td>
+	  <td><a href="https://stateratoken.com/docs/Statera_Whitepaper.pdf">Statera</a></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>2013</td>
+	  <td><a href="https://cryptorating.eu/whitepapers/Ethereum/Ethereum_white_paper.pdf">Ethereum</a></td>
+	  <td>Versione PDF</td>
+	</tr>
+		<tr>
+		<td>2017</td>
+		<td><a href="https://github.com/monero-project/research-lab/blob/master/whitepaper/whitepaper.pdf">Monero</a></td>
+		<td></td>
+	</tr>
+	  <tr>
+	  <td>2017</td>
+	  <td><a href="https://0x.org/pdfs/0x_white_paper.pdf">0x</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2015</td>
+	  <td><a href="https://decentraland.org/whitepaper.pdf">Decentraland</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2020</td>
+	  <td><a href="https://projectserum.com/serum_white_paper.pdf">Serum</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2020</td>
+	  <td><a href="https://uniswap.org/whitepaper.pdf">Uniswap 2 Core</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2020</td>
+	  <td><a href="https://dynamitetoken.io/documentations/whitepaper?__cf_chl_jschl_tk__">Dynamite Token</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2019</td>
+	  <td><a href="https://compound.finance/documents/Compound.Whitepaper.pdf">Compound</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2017</td>
+	  <td><a href="https://qiniu.truescan.network/pdf/whitepaper-en.pdf">Truechain</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2018</td>
+	  <td><a href="https://hellobloom.io/whitepaper.pdf">Bloom Protocol</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2017</td>
+	  <td><a href="https://www.xinfin.org/docs/whitepaper-tech.pdf">XDC Protocol</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2017</td>
+	  <td><a href="https://www.rotharium.io/pdf/Rotharium_Whitepaper.pdf">Rotharium</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2016</td>
+	  <td><a href="https://s3-cdn.herocoin.io/HERO_Whitepaper.pdf">HeroCoin</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2019</td>
+	  <td><a href="https://www.orchid.com/assets/whitepaper/whitepaper.pdf">Orchid</a></td>
+	  <td></td>
+	</tr>
+	  <tr>
+	  <td>2018</td>
+	  <td><a href="https://icon.foundation/resources/whitepaper/ICON_Whitepaper_EN.pdf">ICON</a></td>
+	  <td></td>
+	</tr>
+		<tr>
+		<td>2020</td>
+		<td><a href="https://falconofficial.com/whitepaper/WP-eng.pdf">Falcon</a></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td>2021</td>
+		<td><a href="https://polygon.technology/lightpaper-polygon.pdf">Polygon</a></td>
+		<td>Lightpaper</td>
+	</tr>
+		<tr>
+		<td>2018</td>
+		<td><a href="https://ltonetwork.com/documents/LTO%20Network%20-%20Technical%20Paper.pdf">LTO Network</a></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td>2017</td>
+		<td><a href="https://www.monetha.io/Monetha_WP.pdf">Monetha</a></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td>2019</td>
+		<td><a href="https://crypto.stanford.edu/~buenz/papers/zether.pdf">Zether</a></td>
+		<td></td>
+	</tr>
+		<tr>
+		<td>2017</td>
+		<td><a href="https://numer.ai/whitepaper.pdf">Numeraire</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2017</td>
+		<td><a href="https://www.aidcoin.com/assets/documents/whitepaper.pdf?v=1.2.1">Aidcoin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://www.terra.money/Terra_White_paper.pdf">Terra Money</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2017</td>
+		<td><a href="https://blockchainlab.com/pdf/SWISSCOIN-Whitepaper.pdf">Swisscoin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://bismuth.cz/whitepaper.pdf">Bismuth</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://www.minebee.io/MineBee_Whitepaper_V.1.4..pdf">Minebee</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://klever.io/s/Klever-Whitepaper-v15.pdf">Klever</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://solana.com/solana-whitepaper.pdf">Solana</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://cryptorobotics.io/img/WP_ENG.pdf">Cryptorobotics</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2021</td>
+		<td><a href="https://linear.finance/defi/Linear_Whitepaper_EN.pdf">Linear</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://cryptosoul.io/whitepaper">Cryptosoul</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://www.cryptohidecoin.org/Assets/whitepapers/Whitepaper-IT.pdf">Hidecoin</a></td>
+		<td>In italiano</td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://caspian.tech/wp-content/uploads/2018/05/Caspian_Whitepaper_v1.pdf">Caspian</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://ecoinofficial.org/docs/Ecoin_whitepaper.pdf">Ecoin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2017</td>
+		<td><a href="https://www.aditus.net/Aditus-Whitepaper.pdf">Aditus</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2021</td>
+		<td><a href="https://cryptoexper.com/whitepaper.pdf">Exper</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://hacken.ai/content/hackenai_whitepaper_v1.0.pdf">Hackenai</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://aicrypto.ai/AIC_WhitePaper_Eng.pdf">AICrypto</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://reef.finance/resources/ReefLitePaper_v100c.pdf">Reef Finance</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://dusk.network/uploads/dusk-whitepaper.pdf">Dusk Network</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://www.helix-crypto.com/downloads/helix-whitepaper.pdf">Helix</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://bqt.io/assets/pdf/whitepaper.pdf">BQT</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2017</td>
+		<td><a href="https://uptoken.org/UpToken-whitepaper.pdf">UpToken</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2017</td>
+		<td><a href="https://steem.com/SteemWhitePaper.pdf">Steem</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2021</td>
+		<td><a href="https://adonx.one/assets/docs/whitepaper.pdf">Adonx</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://karbo.io/whitepaper.pdf">Karbo</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://bitcoinplus.org/wp-content/uploads/2020/09/bitcoin-plus-whitepaper.pdf">Bitcoin Plus</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2017</td>
+		<td><a href="https://content.nano.org/whitepaper/Nano_Whitepaper_en.pdf">Nano</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://www.tap.global/wp-content/uploads/2019/06/TapGlobal-Whitepaper-7.pdf">Tap</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2021</td>
+		<td><a href="https://www.frogdao.com/whitepaper.pdf">FrogDAO</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://polkadot.network/Polkadot-lightpaper.pdf">Polkadot</a></td>
+		<td>Lightpaper</td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://lh-crypto.io/static/WhitePaper_en.pdf">LHCOIN</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://coreto.io/Coreto_Lightpaper_1.2.pdf">Coreto</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://www.nyecoin.io/img/NYEWhitePaper.pdf">NYEcoin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://mobiliancoin.com/whitepaper.pdf">Mobilian</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://foam.space/publicAssets/FOAM_Whitepaper.pdf">Foam</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://www.investvoyager.com/VoyagerToken/White_Paper.pdf">Voyager Token</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://indx.capital/files/INDX_Group_Whitepaper.pdf">INDX</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://docs.xyo.network/XYO-White-Paper.pdf">XY Oracle</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2021</td>
+		<td><a href="https://www.neuralium.com/neuralium-whitepaper.pdf">Neuralium</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://www.choosebitcash.com/whitepaper.pdf">Bitcash</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://cntr.finance/docs/whitepaper.pdf">Centaur</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2021</td>
+		<td><a href="http://test.peri.finance/file/Peri%20Whitepaper%20(EN)%20v0.9.pdf">Peri Finance</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://www.morpher.com/docs/morpher_whitepaper.pdf">Morpher</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://www.golikecoin.com/LikeCoin%20Whitepaper.pdf">Likecoin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://platform.newscrypto.io/static/documents/nwc_whitepaper_v1.pdf">Newscrypto</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2020</td>
+		<td><a href="https://swirgepay.com/docs/not-so-whitepaper.pdf">Swirge</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://faglobalbkfinance.com/assets/download/whitepaper_210120.pdf">GP Coin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2013</td>
+		<td><a href="https://www.bytecoin.org/old/whitepaper.pdf">CryptoNote</a></td>
+		<td>Ora Bytecoin</td>
+	</tr>
+	<tr>
+		<td>2018</td>
+		<td><a href="https://nkn.org/wp-content/uploads/2020/10/NKN_Whitepaper.pdf">NKN</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://wbtc.network/assets/wrapped-tokens-whitepaper.pdf">Wrapped Tokens</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2019</td>
+		<td><a href="https://downloads.skycoin.com/whitepapers/Skycoin-Whitepaper-v1.2.pdf">Skycoin</a></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>2014</td>
+		<td><a href="http://zerocash-project.org/media/pdf/zerocash-oakland2014.pdf">Zerocash</a></td>
+		<td></td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+	  <div class="main">
+		<h2 id="SECUR">Security</h2>
+		  <p>In questa sezione mi piacerebbe farvi provare con mano un po' di "crittografia spicciola", per divertimento e cultura personale. 
+			<br>
+			Iniziamo col cifrario di Cesare, old school, <em>completamente inutile</em> al giorno d'oggi ma divertente per giocare con gli amici. 
+<br>
+Dice Svetonio che la usasse Cesare nelle comunicazioni riservate; si tratta di una semplice sostituzione monoalfabetica, facile da fare anche con carta e penna se vi state annoiando. 
+<br>
+L'unica variante ancora in uso è il <a href="https://en.wikipedia.org/wiki/ROT13">ROT-13</a>, a soli fini ludici. 
+<br>
+La versione qui sotto (che non ha alcuna garanzia, nemmeno quella di funzionare) ignora spazi e caratteri speciali. </p>
+<div class="mainContainer">
+
+    <label for="original" style="color:white">Messaggio da codificare:</label> <br>
+    <input id="original" type="text" value=""> <br>
+    <label for="shift" style="color:white">Spostamento:</label><br>
+    <input id="shift" type="number" value="2" placeholder="0"><br>
+
+    <label for="encrypted" style="color:white">Risultato:</label><br>
+    <input id="encrypted" type="text" value="" readonly><br>
+
+  </div>
+
+  <script>
+let originalInput = document.querySelector("#original");
+let shiftInput = document.querySelector("#shift");
+let encryptedInput = document.querySelector("#encrypted");
+
+let clearMessage = originalInput.value;
+originalInput.addEventListener("input", characterEntered, false);
+
+function characterEntered(e) {
+  clearMessage = e.target.value;
+  clearMessage = clearMessage.toLowerCase();
+  clearMessage = clearMessage.replace(/[^a-z]/, '');
+  e.target.value = clearMessage;
+
+  function startEncryption() {
+  let encryptedMessage = "";
+  let shift = shiftInput.value ? Number(shiftInput.value) : 0;
+
+  for (letter of clearMessage) {
+    encryptedMessage += shiftLetter(letter, shift);
+  }
+
+  encryptedInput.value = encryptedMessage;
+}
+
+startEncryption();
+
+function shiftLetter(letter, shift) {
+  let messageCode = "";
+  let letterCode = letter.charCodeAt(0);
+  let ShiftCode = letterCode + (shift % 26);
+
+  if (ShiftCode < 97) {
+    ShiftCode += 26;
+  } else if (ShiftCode > 122) {
+    ShiftCode -= 26;
+  }
+
+  messageCode = String.fromCharCode(ShiftCode);
+  
+  return messageCode;
+}
+}
+  </script>
+  
+<br>
+<p style="color:white" class="tbb-mb-20">Come avrete capito, la protezione offerta da un cifrario a sostituzione monoalfabetica era piuttosto scarsa, facilitata solo dall'analfabetismo diffuso. 
+	Anche un semplice <a href="https://it.wikipedia.org/wiki/Scitala"> scitale</a> permetteva una protezione maggiore dei propri "segreti".<br/>
+Le cose iniziano a farsi un po' più interessanti con i cifrari polialfabetici (salto avanti di qualche secolo), perchè generalizzano il cifrario di Cesare.
+In questi casi si cita sempre il celeberrimo cifrario di Vigenère, ma voglio invece concentrarmi sulla <em>Tabula Recta</em> di Tritemio, che lo precede di almeno trent'anni. (...continua...)
+</p>  
+	  </div>
+
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="main">
+	<h2 id="Contatti">Contatti</h2>
+  	<p>Hai dubbi, domande, riflessioni, curiosità o vuoi suggerire un tema? <br> Scrivimi qui sotto! Il messaggio sarà anonimo.</p>
+      <div class="container">
+    <form target="_blank" action="https://formsubmit.co/8d27563d076335138e90900d2eee61e8" method="POST">
+		<div class="form-group">
+            <textarea placeholder="Il tuo parere" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="butround">Invia</button>
+    </form>
+</div>
+	<p>Se invece preferisci un contatto diretto, puoi mandare una mail a: <br>
+	thebitbet <b>{[metti qui la chiocciolina]}</b> substack.com </p>
+    <p>No, non puoi fare copia incolla. Si, come sistema anti spam funziona ancora, almeno per quello di basso livello. <br>
+	Alla prossima news!</p>
+</div>
+	</div>
+
+	<br><br><br><br><br>
+	<center>
+		<div>
+		<img class="img" src="/img/logodark.jpg" alt="logodark">
+		</div>
+	</center>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html> 

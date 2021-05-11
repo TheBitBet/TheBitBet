@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bit Bet - the brutalist website</title>
+<link href="css/timestyles.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="sidenav">
+  <a  href="index.html#Home">Home</a>
+  <a  href="index.html#FUQ">FUQ</a>
+  <a  href="index.html#Random">Random</a>
+  <a  href="index.html#TOOL">Tools</a>
+  <a  href="index.html#FRACT">Frattali</a>
+  <a  href="cripto.html">Cripto</a>
+  <a  href="#timeline2.html">Timeline</a>
+  <a  href="index.html#whitep">Whitepapers</a> 
+  <a  href="index.html#SECUR">Security</a>
+  <a  href="index.html#Contatti">Contatti</a>
+  <a  href="indexeng.html">English version</a>
+</div>
+
+<body>
+
+  <a name="top"></a>
+  <div class="main">
+  <h1>Timeline</h1>
+  <p> In questa sezione troverai una timeline per gli <a href="#Criptotime">eventi</a> e una per le specifiche <a href="#Criptotimevalute">valute</a>. 
+    <br> 
+    Mi sono divertito a mostrare i dati in modo un po' diverso, spero lo apprezzerai.</p>
+<br>
+<br>      
+  <h2 id="Criptotime">Cripto - timeline eventi</h2>
+  <p>Eccovi una timeline interattiva per capire un po' di più come si è evoluto il panorama crypto negli anni. 
+    <br> E anche se ne sai a pacchi, scommetto che alcuni eventi non sono poi così famosi.
+    <br> Nota per quelli meno smaliziati: <em>i bottoni si possono premere</em>.
+    <br>Se pensi manchi qualcosa di importante, fammelo sapere!
+    <br>
+  </p>
+<center>
+  <div id="myBtnContainer">
+    <button class="btn" onclick="filterSelection('all')"> Mostra tutto</button>
+    <button class="btn" onclick="filterSelection('people')"> Protagonisti</button>
+    <button class="btn" onclick="filterSelection('docs')"> Documenti</button>
+    <button class="btn" onclick="filterSelection('fail')"> Fallimenti</button>
+    <button class="btn" onclick="filterSelection('tech')"> Tecnologia</button>
+    <button class="btn" onclick="filterSelection('news')"> Notizie</button>
+  </div>
+</center>
+
+  <script type="text/javascript">
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    TBBRemoveclass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) TBBAddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function TBBAddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function TBBRemoveclass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace("active", "");
+    this.className += "active";
+  });
+}
+  </script>
+
+
+    <form>
+    <div id="mybutton" >
+      <button onclick="location.href = top" class="topbutton" >Torna all'inizio</button>
+      </div>
+    </form>
+
+
+  <div class="timeline">
+    <ul>
+      <li>
+        <div class="filterDiv tech content">
+          <h3>Nascono i Merkle tree</h3>
+          <p>Il Professor <a href="https://en.wikipedia.org/wiki/Ralph_Merkle">Ralph Merkle</a>, uno degli inventori della Crittografia a chiave pubblica, <a href="https://worldwide.espacenet.com/patent/search/family/022107098/publication/US4309569A?q=pn%3DUS4309569"> brevetta</a> i Merkle Tree,  </p>
+        </div>
+        <div class="time">
+          <h4>1979</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv docs content">
+          <h3>David Chaum pubblica “Blind Signatures for Untraceable Payments”</h3>
+          <p>Questo seminale <a href="https://www.chaum.com/publications/Chaum-blind-signatures.PDF">documento</a> anticipa molte delle idee che saranno alla base delle moderne cripto. Verrà poi pubblicato in Advances in Cryptology -Proceedings of Crypto 82</p>
+        </div>
+        <div class="time">
+          <h4> 1 giugno 1983</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Fondata Digicash</h3>
+          <p>David Chaum fonda Digicash, per applicare la propria tecnologia di Blind Signatures. Ripeto, 1990. </p>
+        </div>
+        <div class="time">
+          <h4>1990</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Time-stamps</h3>
+          <p>Stuart Haber e Scott Stornetta pubblicano il paper che identifica le caratteristiche dei "timestamp" usati ancora oggi </p>
+        </div>
+        <div class="time">
+          <h4>1991</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Bram Cohen e MojoNation</h3>
+          <p>Il futuro fondatore di BitTorrent sperimenta (con poco successo) un sistema di trasferimento decentralizzato, e una dapp ante-litteram. </p>
+        </div>
+        <div class="time">
+          <h4>anni '90</h4>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Bit Gold</h3>
+          <p>Nick Szabo abbozza Bit Gold, una "pre-cripto" che purtroppo non verrà mai sperimentata direttamente</p>
+        </div>
+        <div class="time">
+          <h4>1998 - circa </h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv fail content">
+          <h3>Digicash dichiara bancarotta</h3>
+          <p>La società, creata da David Chaum nel 1989, chiude i battenti. Era un progetto pioneristico, ben prima degli e-commerce.</p>
+        </div>
+        <div class="time">
+          <h4> Giugno 1998</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Pubblicazione di "B-money, an anonymous, distributed electronic cash system"</h3>
+          <p>Wei dai, sul suo sito e nella mailing-list cypherpunks, pubblica un <a href="http://www.weidai.com/bmoney.txt"> saggio </a> su questo ambizioso sistema</p>
+        </div>
+        <div class="time">
+          <h4>Novembre 1998</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Pubblicato il whitepaper di Hashcash</h3>
+          <p>Ideato nel 1997, questo sistema è stato un blueprint per la Proof-of-work di Bitcoin, come scrive Satoshi stesso nel Whitepaper. </p>
+        </div>
+        <div class="time">
+          <h4>1 Agosto 2002</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Inventata la prima Reusable Proof Of Work</h3>
+          <p><a href="https://en.wikipedia.org/wiki/Hal_Finney_(computer_scientist)"></a>Hal Finney</a>, un nome importante per la community, usa Hashcash come base per sviluppare una Proof of Work. Per quanto di scarso successo, si tratta comunque dell'unica POW applicata prima di Bitcoin. </p>
+        </div>
+        <div class="time">
+          <h4>1 Agosto 2004</h4>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Apre Mt.Gox</h3>
+          <p>Mt.Gox -il cui nome significa Magic The Gathering Online eXchange- è stato un pioneristico exchange di criptovalute, aperto da <a href="https://en.wikipedia.org/wiki/Jed_McCaleb">Jed McCaleb</a>, già celebre per eDonkey. Qualche anno più tardi, Jed creerà anche Ripple. Fino al 2010, il sito non si è occupato di criptovalute.</p>
+        </div>
+        <div class="time">
+          <h4> Gennaio 2007</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Entra in scena Satoshi Nakamoto</h3>
+          <p>Il misterioso fondatore, stando al suo <a href="http://p2pfoundation.ning.com/profile/SatoshiNakamoto"> profilo</a> è un quarantenne, maschio, residente in Giappone. Naturalmente, nemmeno questo è sicuro, così come la data. "Si dice" che abbia iniziato a lavorarci nel 2007... </p>
+        </div>
+        <div class="time">
+          <h4> Nel 2007</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Registrato Bitcoin.org</h3>
+          <p>Il celebre <a href="https://bitcoin.org/"> sito</a> è stato registrato tramite <a href="https://anonymousspeech.com/">anonymousspeech</a>, che permette di svolgere questa attività senza diffondere il proprio nome. </p>
+        </div>
+        <div class="time">
+          <h4> 18 agosto 2008</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Pubblicato il Whitepaper di Bitcoin</h3>
+          <p> Il <a href="https://bitcoin.org/bitcoin.pdf">documento originale</a>, nelle sue nove, gloriose pagine. Anche in <a href="https://bitcoin.org/files/bitcoin-paper/bitcoin_it.pdf">italiano</a>. </p>
+        </div>
+        <div class="time">
+          <h4>31 Ottobre 2008</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv tech content">
+          <h3>Genesis block della Blockchain Bitcoin</h3>
+          <p>Il <a href="https://en.bitcoin.it/wiki/Genesis_block">Genesis Block</a> contiene le celeberrime parole (da alcuni considerate anche il manifesto economico della nuova valuta): The Times 03/Jan/2009 Chancellor on brink of second bailout for banks. E sapete chi è il destinatario della prima transazione? Lo stesso Hal Finney</p>
+        </div>
+        <div class="time">
+          <h4> 3 gennaio 2009</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Il primo acquisto</h3>
+          <p>Laszlo Hanyecz effettua la prima transazione "ufficiale", scambiando due pizze per 10.000 Bitcoin a Jacksonville, Florida. Negli anni, sarà ricordata come la pizza da un milione (e più...) di dollari, ma è grazie a esperimenti come questi che le criptovalute hanno avuto successo. </p>
+        </div>
+        <div class="time">
+          <h4>22 Maggio 2010</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Mt.Gox si apre alle criptovalute</h3>
+          <p>Il già citato Jed McCaleb trasforma un proprio dominio in un exchange di cripto, che diventerà in breve tempo uno dei più conosciuti e utilizzati.</p>
+        </div>
+        <div class="time">
+          <h4> 17 luglio 2010</h4>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Apre Silk Road</h3>
+          <p>E' stato per anni il prototipo del mercato darknet, dove bitcoin potevano essere spesi per i fini più disparati. La storia ufficiale del sito è terminata nell'ottobre 2013 con l'arresto di <a href="https://en.wikipedia.org/wiki/Ross_Ulbricht">Ross Ulbricht</a>, ma gli emuli abbondano...</p>
+        </div>
+        <div class="time">
+          <h4> Febbraio 2011</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Bitcoin sul TIME</h3>
+          <p>In tempi non sospetti, ne scrive il periodico americano TIME, in un <a href="https://techland.time.com/2011/04/16/online-cash-bitcoin-could-challenge-governments/">articolo</a>, assieme a Zune, Facebook Credits e Microsoft Points.</p>
+        </div>
+        <div class="time">
+          <h4> 16 Aprile 2011</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv tech content">
+          <h3>Nasce Namecoin</h3>
+          <p>Si tratta di una delle prime altcoin, che funge anche da <a href="https://github.com/namecoin/namecoin-core">DNS alternativo</a> al sistema dell'ICANN.</p>
+        </div>
+        <div class="time">
+          <h4> 18 Aprile 2011</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv tech content">
+          <h3>Nasce Litecoin</h3>
+          <p>Charlie Lee, al tempo dipendente di Google, crea una delle prime altcoin</p>
+        </div>
+        <div class="time">
+          <h4>7 Ottobre 2011</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Fondata Coinbase</h3>
+          <p>Brian Armstrong, ex dipendente di Airbnb, partecipa all'incubatore di startup Y COMBINATOR, ricevendo $150,000 per far partire l'attività. Fred Ehrsam, ex trader di Goldman Sachs, diventa il cofounder. </p>
+        </div>
+        <div class="time">
+          <h4>Giugno 2012</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv people content">
+          <h3>Nasce Bitcoin Foundation</h3>
+          <p>Si rende necessario creare un <a href="https://bitcoinfoundation.org/">organo tecnico</a> di supervisione del sistema, che raduna i programmatori in grado di operare sul codice.</p>
+        </div>
+        <div class="time">
+          <h4>    27 Sett 2012</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Bitcoin Ticker su Bloomberg</h3>
+          <p>Ora gli analisti possono verificarne il funzionamento usando il ticker XBT sui terminali Bloomberg</p>
+        </div>
+        <div class="time">
+          <h4>9 Agosto 2013</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Pubblicato il Withepaper di Ethereum</h3>
+          <p>Un diciannovenne, Vitalik Buterin, propone un innovativo mix tra i sistemi di mining e le piattaforme di sviluppo. E' la genesi di <a href="https://ethereum.org/en/whitepaper/">Ethereum</a>. </p>
+        </div>
+        <div class="time">
+          <h4>Novembre 2013</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv tech content">
+          <h3>Nasce Dogecoin</h3>
+          <p>Sappiatelo, era tutto uno scherzo, ma con Elon Musk nominatosi <a href="https://www.cnet.com/news/elon-musk-dubs-himself-the-dogefather-ahead-of-snl-hosting-gig-on-may-8/">Dogefather</a>, i <a href="https://dogecoin.com/">Dogecoin</a> hanno trasceso la loro stessa parodia. </p>
+        </div>
+        <div class="time">
+          <h4>8 dicembre 2013</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv fail content">
+          <h3>La caduta di MtGox</h3>
+          <p>Dopo un paio di anni "tumultuosi", Mt Gox, al tempo il più grande exchange di bitcoin al mondo, blocca tutte le transazioni. Due settimane dopo dichiara bancarotta. Dalle cause legali, ancora in corso, sembra che l'exchange abbia "perduto" o si sia fatto sottrarre almeno <em>650.000</em> bitcoin.
+             </p>
+        </div>
+        <div class="time">
+          <h4>4 Febbraio 2014</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv people content">
+          <h3>Muore Hal Finney</h3>
+          <p>Scompare per complicazioni dovute alla Sclerosi Laterale Amiotrofica che gli era stata diagnosticata pochi anni prima. Il suo corpo è stato <a href="https://www.wired.com/2014/08/hal-finney/">criopreservato</a>.  </p>
+        </div>
+        <div class="time">
+          <h4>28 agosto 2014</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv tech content">
+          <h3>Nasce Tether</h3>
+          <p>Inizalmente noto come Realcoin (ma cambierà nome dopo pochi mesi), viene emesso il primo token Tether, la stablecoin di maggior successo.
+            Dichiarata ancorata al valore del dollaro, ha sempre goduto di estrema popolarità, nonostante le dichiarazioni non sempre trasparenti. </p>
+        </div>
+        <div class="time">
+          <h4>6 Ottobre 2014</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Lancio Ethereum network</h3>
+          <p>Ethereum è live, la storia degli smart contract inizia. </p>
+        </div>
+        <div class="time">
+          <h4>30 Luglio 2015</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv docs content">
+          <h3> Pubblicato il whitepaper di Lightning Network</h3>
+          <p>Una delle proposte più innovative per migliorare le performance del sistema viene <a href="http://lightning.network/lightning-network-paper.pdf">pubblicata</a>. Sarà l'inizio di una sfida senza esclusione di colpi.
+          </p>
+        </div>
+        <div class="time">
+          <h4>14 gennaio 2016</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv fail content">
+          <h3>Ascesa e declino del DAO</h3>
+          <p> Il DAO (Decentralized Autonomous Organization) è stato un breve e pioneristico esperimento, fallito per un attacco hacker che ne prosciugato le risorse sfruttando bug nella programmazione. L'incredibile successo - per l'epoca - di questo strumento, l'affascinante <a href="https://www.coindesk.com/understanding-dao-hack-journalists">storia</a> dietro al DAO stesso, persino una lettera aperta del presunto <a href="https://pastebin.com/CcGUBgDG">hacker</a>, hanno portato all'ancor più controverso hard fork di ethereum del 20 luglio 2016.</p>
+        </div>
+        <div class="time">
+          <h4> 17 Giugno 2016</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv news content">
+          <h3> ₿ nella codifica Unicode</h3>
+          <p>Il simbolo viene inserito nella versione 10.0 di Unicode, posizione U+20BF, tra i simboli delle valute. </p>
+        </div>
+        <div class="time">
+          <h4>Giugno 2017</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv fail content">
+          <h3>Parity Hack</h3>
+          <p>Un discusso <a href="https://www.parity.io/the-multi-sig-hack-a-postmortem/">bug</a>, sfuggito all'audit del codice, permette a un attaccante di sottrarre 150.000 ETH dal Parity Wallet.</p>
+        </div>
+        <div class="time">
+          <h4>1 Agosto 2017</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv tech content">
+          <h3> Nasce Bitcoin Cash</h3>
+          <p>In uno dei fork più animati di sempre nasce <a href="https://bitcoincash.org/">Bitcoin Cash</a>, altcoin ancora oggi molto usata.</p>
+        </div>
+        <div class="time">
+          <h4>1 Agosto 2017</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>CriptoKitties</h3>
+          <p>Balzano agli onori della cronaca i <a href="https://www.cryptokitties.co/">Criptokitties</a> di Dapper Labs, un gioco online fruibile tramite rete ethereum, tra i primi esempi di NFT.  </p>
+        </div>
+        <div class="time">
+          <h4>Ottobre 2017</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv fail content">
+          <h3>Parity subisce ancora</h3>
+          <p>Dopo il precedente furto, la patch ha causato più danni della precedente. Si parla di mezzo milione di ETH  <a href="https://www.parity.io/a-postmortem-on-the-parity-multi-sig-library-self-destruct/">bloccati</a>, a seguito di un maledestro tentativo di risolvere manualmente il bug da parte dell'utente che lo ha scoperto (altri invece teorizzano sia stato un errore in fase di appropriazione indebita)</p>
+        </div>
+        <div class="time">
+          <h4>1 Agosto 2017</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Pubblicazione Whitepaper TON</h3>
+          <p>Telegram una blockchain che è un'intera nuova infrastruttura, e pubblica il <a href="https://drive.google.com/file/d/1M4aA-Dt6zpKu1csDEx4cMCxLU6dRmrUz/view">documento</a></p>
+        </div>
+        <div class="time">
+          <h4>Dicembre 2017</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv fail content">
+          <h3>Coincheck hack</h3>
+          <p>L'exchange giapponese fa notizia per le <a href="https://blockonomi.com/coincheck-hack/">scarse pratiche di sicurezza</a> e l'ammontare trafugato di NEM, che per controvalore è molto vicino a quello di Mt.Gox  </p>
+        </div>
+        <div class="time">
+          <h4>26 Gennaio 2018</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv fail content">
+          <h3>AskFM e l'assalto all'Everest </h3>
+          <p>Cosa centra ASKfm con le cripto? Beh nel 2018 ha lanciato la propria ICO, con token annesso, decidendo di spedire degli entusiasti con poca preparazione sull'everest, per seppellire un wallet e andare - metaforicamente - to the moon. E' finita con ricoveri, rischi di assideramento e una delle  <a href="https://about.ask.fm/mount-everest-climbing-tragedy-investigation/">guide scomparsa</a>. Come potete immaginare, l'ICO non è andata bene. </p>
+        </div>
+        <div class="time">
+          <h4>14 maggio 2018</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv news content">
+          <h3>Telegram lancia il progetto TON </h3>
+          <p>Pavel Durov, cofondatore del popolare servizio di messaggistica, lancia la timeline per la cripto Gram, da usare sul nuovo ecosistema  <a href="https://www.diem.com/en-us/white-paper/#cover-letter">Telegram Open Network (TON)</a>. Nei mesi successivi raccoglierà un miliardo e mezzo di dollari per questo progetto.</p>
+        </div>
+        <div class="time">
+          <h4> Giugno 2018</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv docs content">
+          <h3>Pubblicato il whitepaper di Libra, la cripto di Facebook </h3>
+          <p>Anche il più discusso dei GAFAM vuole una fetta della torta cripto proponendo una stablecoin chiamata <a href="https://www.diem.com/en-us/white-paper/#cover-letter">Libra</a>.</p>
+        </div>
+        <div class="time">
+          <h4>16 Giugno 2019</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv fail content">
+          <h3>Chiusura TON project </h3>
+          <p> E' lo stesso fondatore ad annunciarlo sul suo <a href="https://t.me/durov/116">canale telegram</a>. Il progetto termina con la riconsegna dei fondi dopo mai troppo chiariti attriti con la SEC.</p>
+        </div>
+        <div class="time">
+          <h4>12 Maggio 2020</h4>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Libra diventa Diem </h3>
+          <p> Un cambio di <a href="https://www.diem.com/en-us/">nome</a> per un progetto discusso e ancora non attivo</p>
+        </div>
+        <div class="time">
+          <h4>Dicembre 2020</h4>
+        </div>
+      </li>
+
+      <li>
+        <div class="filterDiv news content">
+          <h3>Coinbase si quota al NASDAQ
+          </h3>
+          <p>In meno di dieci anni, la società arriva ad avere 43 milioni di utenti, <a href="https://investor.coinbase.com/financials/sec-filings/sec-filings-details/default.aspx?FilingId=14742999">1 miliardo di dollari di ricavi</a> e a quotarsi al NASDAQ. </p>
+        </div>
+        <div class="time">
+          <h4>14 aprile 2021</h4>
+        </div>
+      </li>
+      
+      <li>
+        <div class="filterDiv news content">
+          <h3>E ora?</h3>
+          <p> </p>
+        </div>
+        <div class="time">
+          <h4> 2021</h4>
+        </div>
+      </li>
+      <div style="clear:both;"></div>
+    </ul>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="main">
+  <h2 id="Criptotimevalute">Cripto - timeline valute</h2>
+  <p>In questa seconda sezione volevo invece mostrarvi il percorso "storico" fatto dalle cripto più diffuse, includendo le varie famiglie nate dai <em>fork</em>.
+    <br>
+    In questa versione, è il colore a definire la famiglia di origine della valuta.
+    <br>
+    Noti errori, omissioni, lacune? Scrivimelo, grazie.
+    <br>
+    <br>
+  </p>
+  <div class="tg-wrap"><table class="tg">
+    <thead>
+      <tr>
+        <th>2009</th>
+        <th>2010</th>
+        <th>2011</th>
+        <th>2012</th>
+        <th>2013</th>
+        <th>2014</th>
+        <th>2015</th>
+        <th>2016</th>
+        <th>2017</th>
+        <th>2018</th>
+        <th>2019</th>
+        <th>2020</th>
+        <th>2021</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="14" style ="background-color:rgb(247,147,26)">Bitcoin</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" style ="background-color:rgb(247,147,26)">Bitcoin Cash</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="5" style ="background-color:rgb(247,147,26)">Bitcoin SV</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" style ="background-color:rgb(247,147,26)">Bitcoin Gold</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="8" style ="background-color:rgb(118,106,192)" >Ethereum</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="7"style ="background-color:rgb(118,106,192)">Ethereum Classic</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td colspan="12" style ="background-color:rgb(190,190,190)">Litecoin</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="5" style ="background-color:rgb(190,190,190)">Litecoin Cash</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="11" style ="background-color:rgb(10,147,235)">Ripple</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="2"style ="background-color:rgb(10,147,235)" >Ripple Utility Fork</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="9" style ="background-color:rgb(38,161,123)">Tether</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="9" style ="background-color:rgb(186,159,51)">Dogecoin</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" style ="background-color:rgb(52,104,209)">Cardano</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="6" style ="background-color:rgb(255,71,36)">BAT</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="6"style ="background-color: rgb(230,0,122)"> Polkadot</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" style ="background-color:rgb(89,89,89)"> TON</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    </table>
+	<br>
+	<br>
+	<br>
+	</div>
+
+</body>
+</html>
