@@ -23,7 +23,7 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   color: #818181;
   display: block;
   /*border-style: solid;  ---in caso di bordo, abilita
@@ -33,7 +33,7 @@ body {
 
 .sidenav a:hover {
   font-weight:bold;
-  font-size: 28px; 
+  font-size: 26px; 
   transform: scale(1.10);
   border-style: solid;
   border-width: 1px;
@@ -47,6 +47,7 @@ body {
   padding: 0px 10px;
   color: white;
   page-break-after: always;
+  line-height: 25px;
 }
       
 a:link { /* unvisited link */
@@ -68,13 +69,13 @@ textarea{
 	background-color: darkred;
 	color: whitesmoke;
 	font-size: 16px;
-	padding: 16px 30px;
+	padding: 10px 12px;
   	text-align: center;
 }
 .butround:hover {
   color: #f1f1f1;
   font-weight:bold;
-  font-size: 26px; 
+  font-size: 24px; 
   /*transform: scale(1.10);*/
 
 }
@@ -127,6 +128,8 @@ cards {
 .tether,
 .usdt,
 .bat,
+.bnb,
+.xrp,
 .ethereum {
     display: inline-grid;
     max-width: 450px;
@@ -157,9 +160,10 @@ cards {
 #litecoinChart,
 #usdtChart,
 #batChart,
+#bnbChart,
+#xrpChart,
 #ethereumChart{
   grid-area: chart;
   border-radius: 0px 0px 30px 30px;
   margin-top: auto;
 }
-

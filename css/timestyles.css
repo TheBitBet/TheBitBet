@@ -18,7 +18,7 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #818181;
   display: block;
   /*border-style: solid;  ---se vuoi il bordo, abilita
@@ -28,7 +28,7 @@ body {
 
 .sidenav a:hover {
   font-weight:bold;
-  font-size: 30px; 
+  font-size: 26px; 
   transform: scale(1.10);
   border-style: solid;
   border-width: 1px;
@@ -41,6 +41,7 @@ body {
   padding: 0px 10px;
   color: white;
   page-break-after: always;
+  line-height: 25px;
 }
 
 h1{
