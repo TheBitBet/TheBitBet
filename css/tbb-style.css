@@ -1,5 +1,5 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
   background-color: black;
 }
 
@@ -23,7 +23,7 @@ body {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   color: #818181;
   display: block;
   /*border-style: solid;  ---in caso di bordo, abilita
@@ -33,7 +33,7 @@ body {
 
 .sidenav a:hover {
   font-weight:bold;
-  font-size: 26px; 
+  font-size: 24px; 
   transform: scale(1.10);
   border-style: solid;
   border-width: 1px;
@@ -47,7 +47,7 @@ body {
   padding: 0px 10px;
   color: white;
   page-break-after: always;
-  line-height: 25px;
+  line-height: 24px;
 }
       
 a:link { /* unvisited link */
