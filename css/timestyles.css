@@ -331,3 +331,52 @@ color: white;
   overflow:hidden;
   padding:12px 12px;
 }
+
+.pie2013 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 331deg, rgb(190,190,190) 331deg 352deg, rgb(10,147,235) 8deg);
+  border-radius: 50%
+}
+.pie2014 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 302deg, rgb(190,190,190) 302deg 304deg, rgb(10,147,235) 304deg 359deg, black 1deg);
+  border-radius: 50%
+}
+.pie2015 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 331deg, rgb(190,190,190) 331deg 339deg, rgb(10,147,235) 339deg 351deg, rgb(118,106,192) 9deg);
+  border-radius: 50%
+}
+.pie2016 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 322deg, white 322deg 338deg, rgb(118,106,192) 18deg);
+  border-radius: 50%
+}
+.pie2017 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 165deg, rgb(10,147,235) 165deg 230deg,rgb(118,106,192) 230deg 284deg, rgb(10,193,142) 284deg 313deg, white 47deg );
+  border-radius: 50%
+}
+.pie2018 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 220deg, rgb(10,147,235) 220deg 260deg,rgb(118,106,192) 260deg 310deg, rgb(10,193,142) 310deg 321deg, white 39deg );
+  border-radius: 50%
+}
+.pie2019 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 273deg, rgb(10,147,235) 273deg 290deg,rgb(118,106,192) 290deg 317deg, rgb(10,193,142) 317deg 326deg, rgb(79,175,149) 326deg 335deg, white 24deg );
+  border-radius: 50%
+}
+.pie2020 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 276deg, rgb(10,147,235) 276deg 284deg,rgb(118,106,192) 284deg 327deg, rgb(10,193,142) 327deg 333deg, rgb(79,175,149) 333deg 345deg, white 20deg );
+  border-radius: 50%
+}
