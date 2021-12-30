@@ -30,21 +30,53 @@
     <div class="main">
       <h2 id="clean.html">A zen moment</h2>
       <p>
-        Questa lavagna digitale è a tua disposizione. <br />Quando hai finito,
-        premi il pulsante per liberarti da quello che hai scritto.
+Just Relax with a render of the <a href="https://mathworld.wolfram.com/LorenzAttractor.html">Lorenz attractor </a> (thanks to <a href="https://brm.io/">Liam)</a>.
       </p>
 
-      <form>
-        <textarea name="Text1" rows="20" id="cleantext"></textarea>
-        <button class="butround" onclick="document.getElementById('myInput').value = ''">Reset</button>
-      </form>
+       <canvas id="canvas" class="bg" width="1600" height="1320">
+      </div>
+    </div>
+  </body>
+  <script>
+    // by @liabru - http://brm.io
+    var canvas = document.getElementById('canvas'),
+      context = canvas.getContext('2d'),
+      c = 21,
+      h = 0.0005,
+      t = -6,
+      x0 = Math.random(),
+      y0 = Math.random(),
+      z0 = Math.random(),
+      x1,
+      y1,
+      z1,
+      cx = 800,
+      cy = 450,
+      scalex = 50,
+      scaley = 25,
+      i = 0;
 
+    var interval = setInterval(function() {
+      for (var k = 0; k < 20; k += 1) {
+        x1 = x0 + h * t * (x0 - y0);
+        y1 = y0 + h * (-x0 * z0 + c * x0 - y0);
+        z1 = z0 + h * (x0 * y0 - z0);
 
-      <form>
-        <textarea name="Text1" rows="20"></textarea>
-        <input type="reset" value="Reset" class="butround" />
-      </form>
+        context.strokeStyle = "hsl(" + (Math.abs(x1)*5+220) + "," + Math.abs(y1)*3 + "%," + (Math.abs(z1)*2 + 10) + "%)";
 
+        context.beginPath();
+        context.moveTo(cx + x0 * scalex, cy + y0 * scaley);
+        context.lineTo(cx + x1 * scalex, cy + y1 * scaley);
+        context.stroke();
+
+        x0 = x1;
+        y0 = y1;
+        z0 = z1;
+
+        i += 1;
+      }
+    }, 1);
+  </script>
 
 
 

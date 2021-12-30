@@ -168,3 +168,9 @@ cards {
   margin-top: auto;
 }
 
+#input {animation:fadeIn 3s ease;}
+
+@keyframes fadeIn {
+from{opacity: 0}
+to{opacity:.5}
+}
