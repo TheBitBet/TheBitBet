@@ -30,7 +30,7 @@
     <div class="main">
       <h2 id="clean.html">A zen moment</h2>
       <p>
-A render of the <a href="https://mathworld.wolfram.com/LorenzAttractor.html">Lorenz attractor </a> (thanks to <a href="https://brm.io/">Liam)</a>.
+A render loosely based on the <a href="https://mathworld.wolfram.com/LorenzAttractor.html">Lorenz attractor </a> (original code made by <a href="https://brm.io/">Liam)</a>.
       </p>
 
        <canvas id="canvas" class="bg" width="1600" height="1320">
@@ -41,9 +41,9 @@ A render of the <a href="https://mathworld.wolfram.com/LorenzAttractor.html">Lor
     // by @liabru - http://brm.io
     var canvas = document.getElementById('canvas'),
       context = canvas.getContext('2d'),
-      c = 21,
+      c = Math.floor((Math.random() * 10) + 11),
       h = 0.0005,
-      t = -6,
+      t = Math.floor((Math.random() -10)),
       x0 = Math.random(),
       y0 = Math.random(),
       z0 = Math.random(),
