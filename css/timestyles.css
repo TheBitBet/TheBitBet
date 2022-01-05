@@ -380,3 +380,9 @@ color: white;
   background-image: conic-gradient(rgb(247,147,26) 276deg, rgb(10,147,235) 276deg 284deg,rgb(118,106,192) 284deg 327deg, rgb(10,193,142) 327deg 333deg, rgb(79,175,149) 333deg 345deg, white 20deg );
   border-radius: 50%
 }
+.pie2021 {
+  width: 400px;
+  height: 400px;
+  background-image: conic-gradient(rgb(247,147,26) 200deg, rgb(118,106,192) 200deg 300deg, rgb(10,147,235) 300deg 310deg, rgb(10,193,142) 310deg 320deg, white 40deg );
+  border-radius: 50%
+}
