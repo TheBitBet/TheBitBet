@@ -1,4 +1,4 @@
-This is a test on a website stumbleupon-like related to TheBitBet newsletter
+This is a test on a website stumbleupon-like related to TheBitBet newsletter, and some extra matrial because... it's fun. Yup.
 
 <!--
 **TheBitBet/TheBitBet** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
