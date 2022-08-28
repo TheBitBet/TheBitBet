@@ -4,9 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>The Bit Bet - the brutalist website</title>
     <link href="css/tbb-style.css" rel="stylesheet">
+
   </head>
   <body>
-    <div class="sidenav">
+
+<div class="sidenav">
       <a href="index.html">Home</a>
       <a href="index.html#FUQ">FUQ</a>
       <a href="index.html#Random">Random</a>
@@ -24,24 +26,23 @@
       <a href="index.html#twinetut">Twine tutorial</a>
       <a href="clean.html">A zen moment</a>
       <a href="index.html#Contatti">Contatti</a>
+      <a  href="index.html#games.html">Giochi/test</a>
       <a href="indexeng.html">English version</a>
-    </div>
+  </div>
 
     <div class="main">
       <h2 id="clean.html">A zen moment</h2>
-      <p>
-A render loosely based on the <a href="https://mathworld.wolfram.com/LorenzAttractor.html">Lorenz attractor </a> (original code made by <a href="https://brm.io/">Liam)</a>.
+      <p> A relaxing render loosely based on the <a href="https://mathworld.wolfram.com/LorenzAttractor.html">Lorenz attractor </a> (original code made by <a href="https://brm.io/">Liam</a>).
       </p>
 
-       <canvas id="canvas" class="bg" width="1600" height="1320">
-      </div>
-    </div>
-  </body>
+       <canvas id="canvas" class="bg" width="1600" height="1100">
+
+
   <script>
     var canvas = document.getElementById('canvas'),
       context = canvas.getContext('2d'),
-      c = Math.floor((Math.random() * 10) + 11),
-      h = 0.0005,
+      c = Math.floor((Math.random() * 10) + 14),
+      h = 0.0007, 
       t = Math.floor((Math.random() -10)),
       x0 = Math.random(),
       y0 = Math.random(),
@@ -49,10 +50,10 @@ A render loosely based on the <a href="https://mathworld.wolfram.com/LorenzAttra
       x1,
       y1,
       z1,
-      cx = 800,
+      cx = 800, 
       cy = 450,
-      scalex = 50,
-      scaley = 25,
+      scalex = Math.floor(Math.random() * 60),
+      scaley = Math.floor(Math.random() * 30),
       i = 0;
 
     var interval = setInterval(function() {
@@ -61,7 +62,7 @@ A render loosely based on the <a href="https://mathworld.wolfram.com/LorenzAttra
         y1 = y0 + h * (-x0 * z0 + c * x0 - y0);
         z1 = z0 + h * (x0 * y0 - z0);
 
-        context.strokeStyle = "hsl(" + (Math.abs(x1)*5+220) + "," + Math.abs(y1)*3 + "%," + (Math.abs(z1)*2 + 10) + "%)";
+        context.strokeStyle = "hsl(" + (Math.abs(x1)*5+230) + "," + Math.abs(y1)*3 + "%," + (Math.abs(z1)*2 + 11) + "%)";
 
         context.beginPath();
         context.moveTo(cx + x0 * scalex, cy + y0 * scaley);
@@ -77,12 +78,12 @@ A render loosely based on the <a href="https://mathworld.wolfram.com/LorenzAttra
     }, 1);
   </script>
 
-
-
-    </div>
 </div>
-
-
+<div>
+      <form>
+      <input type = "button" class='butround' value = "Aggiorna" onclick = "location.reload();" />
+      </form>
+</div>
 
 
   </body>
