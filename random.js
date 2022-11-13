@@ -613,7 +613,7 @@ var links = [
   "https://hashes.com/en/decrypt/hash",
   "https://kottke.org/20/12/the-chart-of-doom-ranking-apocalypses",
   "https://kamelrechner.eu/it",
-    "https://www.youtube.com/watch?v=hCuMWrfXG4E,
+  "https://www.youtube.com/watch?v=hCuMWrfXG4E",
   "http://ronja.twibright.com/optar/",
   "https://pudding.cool/2022/08/censorship/",
   "https://stanleycenter.org/publications/osint-applied-ethics-workbook/",
@@ -651,8 +651,9 @@ var links = [
   "https://parmen.com/",
   "https://greenchess.net/variants.php?cat=7",
   "https://play.aidungeon.io/main/home",
-  "https://hectorsalamanca.com/",
+  "https://hectorsalamanca.com/"
 ];
+
 var rand = links[Math.floor(Math.random() * links.length)];
 function Redirect() {
   window.location = rand;
