@@ -700,7 +700,31 @@ var links = [
   "https://www.whatshappening.online/",
   "https://biztoc.com/",
   "https://easylang.online/run/",
-  "https://interconnected.org/home/2022/12/07/gravy"
+  "https://interconnected.org/home/2022/12/07/gravy",
+  "https://meml.ink/#MTsxfGZpZzpNZW1MaW5rOzU7MjtjfGgyOkluLW1lbW9yeSBtaWNybyB3ZWIgcGFnZXM7NTszO2N8cDpNZW1MaW5rcyBhcmUgc2VsZi1jb250YWluZWQsIG1pY3JvIHdlYnNpdGVzIHRoYXQgYXJlIGZ1bGx5IGdlbmVyYXRlZCBhdCB0aGUgZWRnZS58cDpVc2UgYSBNZW1MaW5rIHRvIGVhc2lseSBzaGFyZSBsaXN0cyBvZiBsaW5rcywgY29udGFjdCBkZXRhaWxzLCBwcm9qZWN0IG92ZXJ2aWV3cywgYW5kIHNvIG11Y2ggbW9yZS58aDM6VGhlIGxpbmsgaXMgdGhlIHdlYiBwYWdlLjsxOzN8cDpNZW1saW5rIHBhZ2VzIGFyZSBjb21wb3NlZCBvZiBibG9ja3MgdGhhdCBjYW4gYmUgYWRkZWQsIHJlbW92ZWQsIGFuZCByZWFycmFuZ2VkIHRvIG1ha2UgdW5pcXVlIGFuZCBjcmVhdGl2ZSBjb250ZW50LnxwOkNyZWF0ZSB5b3VyIG93biBNZW1saW5rIG5vdyBieSBjbGlja2luZyBFZGl0IHRoaXMgcGFnZSBiZWxvdy4g",
+	"https://www.nature.com/articles/s41598-021-99468-6.pdf",
+	"https://www.thiswebsitewillselfdestruct.com/",
+	"https://interestingengineering.com/culture/this-twitter-user-measures-the-speed-of-light-with-a-chocolate-bar",
+	"https://www.youtube.com/watch?v=l327LbNx1_o",
+	"https://www.youtube.com/watch?v=J2UyOTS3UCE",
+	"https://www.youtube.com/watch?v=xasm3GFL7mM",
+	"https://www.youtube.com/watch?v=tbbky_RwFyc",
+	"https://www.youtube.com/watch?v=4XiWUis2eKc",
+	"https://www.youtube.com/watch?v=vC9Qh709gas",
+	"https://www.youtube.com/watch?v=cdLXvJ8wFY4",
+	"https://www.cocainebear.movie/",
+	"https://stallman.org/stallman-computing.html",
+	"https://jokelub.com/",
+	"https://philippschmitt.com/blueprints-for-intelligence",
+	"https://www.withdiode.com/",
+	"https://zxnet.co.uk/teletext/viewer/",
+	"https://vimeo.com/283507872",
+	"https://www.vrc.crim.cam.ac.uk/vrcresearch/london-medieval-murder-map",
+	"https://geodienst.github.io/lighthousemap/",
+	"https://betweentheplaces.glitch.me/",
+	"https://www.wigle.net/",
+	"https://www.bobbyneeladams.com/familytree",
+	"http://www.brooklynbarmenus.com/"
 ];
 
 var rand = links[Math.floor(Math.random() * links.length)];
