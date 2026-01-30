@@ -1,4 +1,4 @@
-This is a test on a website stumbleupon-like related to TheBitBet newsletter (https://thebitbet.substack.com/), and some extra material because... it's fun. Yup.
+This is a test on a website stumbleupon-like related to TheBitBet newsletter (https://thebitbet.substack.com/), and some extra material. Yup.
 
 <!--
 
