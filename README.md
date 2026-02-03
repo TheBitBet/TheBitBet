@@ -1,4 +1,6 @@
-This is a test on a website stumbleupon-like related to TheBitBet newsletter (https://thebitbet.substack.com/), and some extra material. Yup.
+This repo was the website for my (now closed) newsletter The Bit Bet.(https://thebitbet.substack.com/).
+
+After dabbling in html e JS for a stumbleupon-like webiste, I decided to host here my other python projects.
 
 <!--
 
